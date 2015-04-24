@@ -26,7 +26,7 @@ def create
     @user = User.find(params[:id])
 
     if @user.update_attributes(user_params)
-      redirect_to restaurants_path
+      redirect_to restaurants_url
     else
       render :edit
     end
