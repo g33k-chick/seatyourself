@@ -6,10 +6,11 @@ class CreateRestaurants < ActiveRecord::Migration
       t.string :phone
       t.text :summary
       t.integer :capacity
-      t.time :open_time
-      t.time :close_time
+      t.datetime :open_time
+      t.datetime :close_time
       t.string :website
       t.string :category
+      t.string :photo
 
       t.timestamps null: false
     end

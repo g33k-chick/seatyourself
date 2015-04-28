@@ -13,7 +13,8 @@ class ReservationsController < ApplicationController
   	if @reservation.save
   		redirect_to restaurants_path, notice: 'Reservation created successfully'
   	else
-  		render 'restaurants/show'
+  		redirect_to restaurant_path(@restaurant), alert: 'No available seats available for that '
+
   	end
   end
 
@@ -27,6 +28,7 @@ class ReservationsController < ApplicationController
   def reservation_params
   	params.require(:reservation).permit(:restaurant_id, :user_id, :time_slot, :party_size)
   end
+
   def load_restaurant
   	@restaurant = Restaurant.find(params[:restaurant_id])
   end

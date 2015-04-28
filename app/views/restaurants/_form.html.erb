@@ -21,6 +21,10 @@
 		<%= f.text_field :address %>
 	</div>
 	<div class="field">
+		<%= f.label :phone %><br />
+		<%= f.text_field :phone %>
+	</div>
+	<div class="field">
 		<%= f.label :summary %><br />
 		<%= f.text_area :summary %>
 	</div>
@@ -36,6 +40,12 @@
 		<%= f.label :category %><br />
 		<%= f.text_field :category %>
 	</div>
+<div class="field">
+		<%= f.label :photo %><br />
+		<%= f.text_field :photo %>
+	</div>
+
+
 	<div class="actions">
 		<%= f.submit "Add new Restaurant" %>
 	</div>
